@@ -1,0 +1,21 @@
+---
+collections:
+- awx.awx
+- amazon.aws
+- ansible.posix
+- ansible.windows
+- awx.awx
+- azure.azcollection
+- community.vmware
+- google.cloud
+- kubernetes.core
+- openstack.cloud
+- ovirt.ovirt
+- redhatinsights.insights
+- theforeman.foreman
+- community.aws
+- community.general
+- name: https://github.com/jahknem/nokia.isam.git
+  type: git
+  version: main
+- netbox.netbox
