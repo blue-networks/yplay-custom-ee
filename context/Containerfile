@@ -2,7 +2,7 @@ ARG EE_BASE_IMAGE=quay.io/ansible/ansible-runner:latest
 ARG EE_BUILDER_IMAGE=quay.io/ansible/ansible-builder:latest
 
 FROM $EE_BASE_IMAGE as galaxy
-ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=
+ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=-v
 USER root
 
 ADD _build /build
@@ -21,7 +21,6 @@ RUN assemble
 
 FROM $EE_BASE_IMAGE
 USER root
-RUN pip3 install --upgrade pip setuptools
 
 COPY --from=galaxy /usr/share/ansible /usr/share/ansible
 
