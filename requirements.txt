@@ -1,3 +1,4 @@
 paramiko
 defusedxml
 debugpy
+ansible-runner>=2.2.1
