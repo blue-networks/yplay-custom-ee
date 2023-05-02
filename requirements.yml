@@ -19,6 +19,7 @@ collections:
   type: git
   version: main
 - netbox.netbox
-- name: https://github.com/blue-networks/yplay-new-customer-role.git
+roles:
+- src: https://github.com/blue-networks/yplay_new_customer_role.git
   type: git
   version: stable
