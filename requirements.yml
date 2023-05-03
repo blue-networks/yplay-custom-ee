@@ -15,6 +15,7 @@ collections:
   - theforeman.foreman
   - community.aws
   - community.general
+  - moreati.jq
   - name: https://github.com/jahknem/nokia.isam.git
     type: git
     version: main
