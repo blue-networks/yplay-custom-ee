@@ -6,6 +6,8 @@ ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=-v
 ARG ANSIBLE_GALAXY_CLI_ROLE_OPTS=
 USER root
 
+ADD _build/ansible.cfg ~/.ansible.cfg
+
 ADD _build /build
 WORKDIR /build
 
