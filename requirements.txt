@@ -6,3 +6,5 @@ ansible
 jq
 ansible-pylibssh
 jmespath
+anytree
+textfsm

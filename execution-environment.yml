@@ -1,15 +1,31 @@
 ---
-version: 1
+version: 3
 
 build_arg_defaults:
   ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: "-v"
 
-ansible_config: 'ansible.cfg'
+images:
+  base_image:
+    name: quay.io/centos/centos:stream9-minimal
+
+options:
+  package_manager_path: /usr/bin/microdnf
 
 dependencies:
+  python_interpreter:
+    package_system: python3.11
+    python_path: /usr/bin/python3.11
+  ansible_core:
+    package_pip: ansible-core>=2.18.0
+  ansible_runner:
+    package_pip: ansible-runner>=2.3.0
   galaxy: requirements.yml
   python: requirements.txt
 
 additional_build_steps:
-  append:
+  append_base:
+    - RUN alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 0
+  prepend_galaxy:
+    - RUN microdnf install -y git-core && microdnf clean all
+  append_final:
     - RUN ls -al /
