@@ -9,7 +9,6 @@ collections:
   - moreati.jq
   - name: https://github.com/jahknem/nokia.isam.git
     type: git
-    version: main
+    version: "0.3.3"
   - name: netbox.netbox
     version: ">=3.14.0"
-
