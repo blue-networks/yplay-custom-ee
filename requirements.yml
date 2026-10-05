@@ -4,11 +4,16 @@ collections:
     version: "8.6.1"
     source: https://galaxy.ansible.com
   - name: ansible.utils
+    version: "6.1.0"
     source: https://galaxy.ansible.com
-  - community.general
-  - moreati.jq
+  - name: community.general
+    version: "7.4.0"
+    source: https://galaxy.ansible.com
+  - name: moreati.jq
+    version: "0.2.1"
+    source: https://galaxy.ansible.com
   - name: https://github.com/jahknem/nokia.isam.git
     type: git
     version: "0.3.3"
   - name: netbox.netbox
-    version: ">=3.14.0"
+    version: "3.14.0"
