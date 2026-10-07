@@ -1,0 +1,11 @@
+# ansible-builder generates this directory from execution-environment.yml on
+# every build. Tracking it caused stale copies to shadow the source files: a
+# fix to ansible.cfg or requirements.yml had no effect until the directory was
+# deleted by hand.
+context/
+
+# Local build state
+__pycache__/
+*.pyc
+.venv/
+venv/
