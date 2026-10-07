@@ -1,19 +1,22 @@
 ---
 collections:
   - name: ansible.netcommon
-    version: "8.6.1"
+    version: "8.7.1"
     source: https://galaxy.ansible.com
   - name: ansible.utils
-    version: "6.1.0"
+    version: "6.1.1"
     source: https://galaxy.ansible.com
   - name: community.general
-    version: "7.4.0"
+    version: "13.5.0"
     source: https://galaxy.ansible.com
   - name: moreati.jq
     version: "0.2.1"
     source: https://galaxy.ansible.com
+  # Feature branch: carries the ont_serials facts subset, which the Customer
+  # Reconcile v2 serial-reuse guard requires. Replace with the release tag once
+  # the collection is tagged and published.
   - name: https://github.com/jahknem/nokia.isam.git
     type: git
-    version: "0.3.3"
+    version: "feature/ont-serial-index"
   - name: netbox.netbox
-    version: "3.14.0"
+    version: "3.23.0"

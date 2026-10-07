@@ -1,5 +1,5 @@
 defusedxml==0.7.1
-debugpy==1.8.21
+debugpy==1.8.22
 jq==1.12.0
 ansible-pylibssh==1.4.0
 jmespath==1.1.0
