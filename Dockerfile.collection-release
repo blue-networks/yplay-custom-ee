@@ -1,6 +1,6 @@
 # Minimal collection-only rollout; retain the tested production Python/transport stack.
 FROM ghcr.io/blue-networks/yplay-custom-ee@sha256:9fd218b943c011d57d315bab22bdca6ce33266a0811a2cb6596bd01068b1f424
 USER 0
-COPY nokia-isam-0.3.9.tar.gz /tmp/nokia-isam-release.tar.gz
+COPY nokia-isam-0.3.10.tar.gz /tmp/nokia-isam-release.tar.gz
 RUN HOME=/tmp ansible-galaxy collection install /tmp/nokia-isam-release.tar.gz --force --no-deps -p /usr/share/ansible/collections
 USER 1000
