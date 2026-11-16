@@ -25,7 +25,7 @@ currently pinned to a commit-specific image tag.
 ## Collection-only 0.3.10 rollout
 
 For isolated NOC check jobs, `Dockerfile.noc-check` installs `nokia.isam` 0.3.11
-from commit `33ba8a1ff2965879af7f4b4d8d1d0e864d1a8d5f` over the deployed 0.3.10
+from commit `b017b4e81cdeae6cad2767c7846d0e67e44e95b7` over the deployed 0.3.10
 EE digest. Build the collection from a clean Git archive (no local captures or
 credentials), put only its tarball in the Docker build context, and publish a
 commit-specific image tag. Register a **separate** AWX execution environment and

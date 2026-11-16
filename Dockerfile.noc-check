@@ -1,5 +1,5 @@
 # Isolated NOC check environment: preserve the deployed 0.3.10 transport/runtime.
-# Install the artifact built from nokia.isam commit 33ba8a1ff2965879af7f4b4d8d1d0e864d1a8d5f.
+# Install the artifact built from nokia.isam commit b017b4e81cdeae6cad2767c7846d0e67e44e95b7.
 FROM ghcr.io/blue-networks/yplay-custom-ee@sha256:628eab3dc3628919f80214b4ccc0c6494be2aba4c17c3a7748ddc870bb249b94
 USER 0
 COPY nokia-isam-0.3.11.tar.gz /tmp/nokia-isam-release.tar.gz
