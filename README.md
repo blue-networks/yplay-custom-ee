@@ -24,6 +24,18 @@ currently pinned to a commit-specific image tag.
 
 ## Collection-only 0.3.10 rollout
 
+For isolated NOC check jobs, `Dockerfile.noc-check` installs `nokia.isam` 0.3.11
+from commit `33ba8a1ff2965879af7f4b4d8d1d0e864d1a8d5f` over the deployed 0.3.10
+EE digest. Build the collection from a clean Git archive (no local captures or
+credentials), put only its tarball in the Docker build context, and publish a
+commit-specific image tag. Register a **separate** AWX execution environment and
+use it only on the NOC check template; do not switch the reader or other
+provisioning templates. Shared full-build requirements remain unchanged.
+
+```sh
+docker build -f Dockerfile.noc-check -t "ghcr.io/blue-networks/yplay-custom-ee:noc-check-$(git rev-parse --short HEAD)" "$BUILD_CONTEXT"
+```
+
 `Dockerfile.collection-release` preserves the deployed EE digest and changes only
 the Nokia collection. Download the release artifact into a private build context,
 verify it against the published checksum, then build with this Dockerfile and tag
