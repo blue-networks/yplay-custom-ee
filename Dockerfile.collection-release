@@ -1,7 +1,7 @@
 # Minimal collection-only rollout; retain the tested production Python/transport stack.
-# Base: the deployed EE 74 image (nokia.isam 0.3.10, tag 64e8365); only the collection changes.
-FROM ghcr.io/blue-networks/yplay-custom-ee@sha256:628eab3dc3628919f80214b4ccc0c6494be2aba4c17c3a7748ddc870bb249b94
+# Base: the deployed EE 74/75 image (nokia.isam 0.3.12, tag 628f43b); only the collection changes.
+FROM ghcr.io/blue-networks/yplay-custom-ee@sha256:fca8cb456849cf3c14b4d8f7e008be219b812a6fb9612ccee202c085a128fff9
 USER 0
-COPY nokia-isam-0.3.12.tar.gz /tmp/nokia-isam-release.tar.gz
+COPY nokia-isam-0.3.13.tar.gz /tmp/nokia-isam-release.tar.gz
 RUN HOME=/tmp ansible-galaxy collection install /tmp/nokia-isam-release.tar.gz --force --no-deps -p /usr/share/ansible/collections
 USER 1000
